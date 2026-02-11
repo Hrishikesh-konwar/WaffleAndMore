@@ -12,15 +12,15 @@ import { useState } from 'react'
 export default function Page() {
   const [showMore, setShowMore] = useState(false)
 
-  const galleryItems = [
-    { id: 1, src: '/waffle-hero.jpg', alt: 'Waffle with whipped cream' },
-    { id: 2, src: '/chocolate-waffle.jpg', alt: 'Chocolate waffle' },
-    { id: 3, src: '/waffle-varieties.jpg', alt: 'Waffle varieties' },
-    { id: 4, src: '/cafe-interior.jpg', alt: 'Cafe ambiance' },
+  const sneakPeekItems = [
+    { id: 1, src: '/waffle-hero.jpg', alt: 'Waffle in hand' },
+    { id: 2, src: '/chocolate-waffle.jpg', alt: 'Decorated waffle' },
+    { id: 3, src: '/waffle-varieties.jpg', alt: 'Waffle with drink' },
   ]
 
-  const allGalleryItems = [
-    ...galleryItems,
+  const allSneakPeekItems = [
+    ...sneakPeekItems,
+    { id: 4, src: '/cafe-interior.jpg', alt: 'Cafe ambiance' },
     { id: 5, src: '/waffle-hero.jpg', alt: 'Premium waffle' },
     { id: 6, src: '/chocolate-waffle.jpg', alt: 'Chocolate indulgence' },
   ]
@@ -59,28 +59,7 @@ export default function Page() {
       {/* Gallery Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(showMore ? allGalleryItems : galleryItems).map((item) => (
-              <div key={item.id} className="relative h-64 rounded-lg overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-300">
-                <Image
-                  src={item.src || "/placeholder.svg"}
-                  alt={item.alt}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-          {!showMore && (
-            <div className="text-center mt-12">
-              <button 
-                onClick={() => setShowMore(true)}
-                className="text-primary hover:text-primary/80 transition font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
-              >
-                <span>+ Show More</span>
-              </button>
-            </div>
-          )}
+          {/* Gallery section removed - content moved to Sneak Peek */}
         </div>
       </section>
 
@@ -92,31 +71,28 @@ export default function Page() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl group">
-              <Image
-                src="/waffle-hero.jpg"
-                alt="Waffle in hand"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl group">
-              <Image
-                src="/chocolate-waffle.jpg"
-                alt="Decorated waffle"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl group">
-              <Image
-                src="/waffle-hero.jpg"
-                alt="Waffle with drink"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-            </div>
+            {(showMore ? allSneakPeekItems : sneakPeekItems).map((item) => (
+              <div key={item.id} className="relative h-96 rounded-lg overflow-hidden shadow-2xl group">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+            ))}
           </div>
+          
+          {!showMore && (
+            <div className="text-center mt-12">
+              <button 
+                onClick={() => setShowMore(true)}
+                className="text-primary hover:text-primary/80 transition font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
+              >
+                <span>+ Show More</span>
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
