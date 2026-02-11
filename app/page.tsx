@@ -27,7 +27,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Navbar />
+      <Navbar isHomePage={true} />
 
       {/* Hero Section with Background Image */}
       <section className="relative h-screen flex items-end justify-start bg-background overflow-hidden">

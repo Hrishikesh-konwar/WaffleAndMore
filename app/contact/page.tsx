@@ -72,7 +72,7 @@ export default function ContactPage() {
                   <CardContent className="space-y-5 pt-6">
                     <div>
                       <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Address</p>
-                      <p className="text-foreground mt-2 leading-relaxed">
+                      <p className="text-black mt-2 leading-relaxed">
                         Nagarpalika Shopping Centre, Civil Hospital Road, Moficer Jin Compound, Bharuch, Gujarat 392001
                       </p>
                     </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                     <div className="flex items-start gap-3 pt-2">
                       <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-foreground font-semibold">10:00 AM - 10:00 PM</p>
+                        <p className="text-black font-semibold">10:00 AM - 10:00 PM</p>
                         <p className="text-sm text-muted-foreground">Open All Days</p>
                       </div>
                     </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   <CardContent className="space-y-5 pt-6">
                     <div>
                       <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Address</p>
-                      <p className="text-foreground mt-2 leading-relaxed">
+                      <p className="text-black mt-2 leading-relaxed">
                         Orange Heights, Sardar Park, Golden Point Chowkdi Road, GIDC, Ankleshwar, Gujarat 393002
                       </p>
                     </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                     <div className="flex items-start gap-3 pt-2">
                       <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="text-foreground font-semibold">10:00 AM - 10:00 PM</p>
+                        <p className="text-black font-semibold">10:00 AM - 10:00 PM</p>
                         <p className="text-sm text-muted-foreground">Open All Days</p>
                       </div>
                     </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                   <CardContent className="p-8">
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
                           Your Name
                         </label>
                         <Input
@@ -141,12 +141,12 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="John Doe"
-                          className="bg-background border-border"
+                          className="bg-white border-border text-black"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
                           Email Address
                         </label>
                         <Input
@@ -157,12 +157,12 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="john@example.com"
-                          className="bg-background border-border"
+                          className="bg-white border-border text-black"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                        <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
                           Message
                         </label>
                         <Textarea
@@ -173,7 +173,7 @@ export default function ContactPage() {
                           required
                           placeholder="Tell us what you think..."
                           rows={5}
-                          className="bg-background border-border"
+                          className="bg-white border-border text-black"
                         />
                       </div>
 
