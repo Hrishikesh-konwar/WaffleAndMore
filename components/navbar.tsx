@@ -19,7 +19,8 @@ export function Navbar() {
               alt="Waffle & More Logo" 
               width={200} 
               height={80}
-              className="h-16 w-auto"
+              className="h-16 w-auto mix-blend-screen"
+              style={{ filter: 'brightness(1.2)' }}
             />
           </Link>
 
