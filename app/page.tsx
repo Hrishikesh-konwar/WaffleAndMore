@@ -32,7 +32,7 @@ export default function Page() {
       {/* Hero Section with Background Image */}
       <section className="relative h-screen flex items-end justify-start bg-background overflow-hidden">
         <Image
-          src="/images/image.png"
+          src="/waffle-hero.jpg"
           alt="Waffle and coffee showcase"
           fill
           className="object-cover absolute inset-0"
@@ -94,7 +94,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl group">
               <Image
-                src="/images/image.png"
+                src="/waffle-hero.jpg"
                 alt="Waffle in hand"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-300"
