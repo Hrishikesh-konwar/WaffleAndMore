@@ -12,18 +12,16 @@ import { useState } from 'react'
 export default function Page() {
   const [showMore, setShowMore] = useState(false)
 
-  const sneakPeekItems = [
-    { id: 1, src: '/waffle-hero.jpg', alt: 'Waffle in hand' },
-    { id: 2, src: '/chocolate-waffle.jpg', alt: 'Decorated waffle' },
-    { id: 3, src: '/waffle-varieties.jpg', alt: 'Waffle with drink' },
-  ]
+  // Dynamically generate image paths from WebsitePhotos folder
+  // Adjust the total count based on how many images you have
+  const totalImages = 30 // Update this if you add/remove images
+  const allSneakPeekItems = Array.from({ length: totalImages }, (_, index) => ({
+    id: index + 1,
+    src: `/WebsitePhotos/Artboard${index + 1}.jpg`,
+    alt: `Waffle creation ${index + 1}`
+  }))
 
-  const allSneakPeekItems = [
-    ...sneakPeekItems,
-    { id: 4, src: '/cafe-interior.jpg', alt: 'Cafe ambiance' },
-    { id: 5, src: '/waffle-hero.jpg', alt: 'Premium waffle' },
-    { id: 6, src: '/chocolate-waffle.jpg', alt: 'Chocolate indulgence' },
-  ]
+  const sneakPeekItems = allSneakPeekItems.slice(0, 12) // Show first 12 initially
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -45,7 +43,7 @@ export default function Page() {
               For All Your Dessert & Coffee Cravings
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-10 italic">
-              The coziest spot in town!
+              The OG Waffle spot in town!
             </p>
             <Link href="/contact">
               <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-base uppercase font-semibold tracking-wide">
@@ -93,6 +91,17 @@ export default function Page() {
               </button>
             </div>
           )}
+          
+          {showMore && (
+            <div className="text-center mt-12">
+              <button 
+                onClick={() => setShowMore(false)}
+                className="text-primary hover:text-primary/80 transition font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
+              >
+                <span>- Show Less</span>
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -107,19 +116,14 @@ export default function Page() {
           </p>
           
           <div className="space-y-4 max-w-2xl mx-auto">
-            <Link href="#" className="block">
+            <Link href="https://zomato.onelink.me/xqzv/o77p2umh" target="_blank" rel="noopener noreferrer" className="block">
               <button className="w-full py-4 px-8 border-2 border-white text-white hover:bg-white/10 transition rounded-full font-semibold uppercase tracking-wider text-lg">
                 Zomato
               </button>
             </Link>
-            <Link href="#" className="block">
+            <Link href="https://www.swiggy.com/menu/1296932?source=sharing" target="_blank" rel="noopener noreferrer" className="block">
               <button className="w-full py-4 px-8 border-2 border-white text-white hover:bg-white/10 transition rounded-full font-semibold uppercase tracking-wider text-lg">
                 Swiggy
-              </button>
-            </Link>
-            <Link href="#" className="block">
-              <button className="w-full py-4 px-8 border-2 border-white text-white hover:bg-white/10 transition rounded-full font-semibold uppercase tracking-wider text-lg">
-                Premix Range on Amazon
               </button>
             </Link>
           </div>
@@ -147,16 +151,38 @@ export default function Page() {
                 @waffles&more
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="relative h-40 bg-muted rounded-lg overflow-hidden">
-                    <Image
-                      src="/waffle-hero.jpg"
-                      alt={`Instagram post ${i}`}
-                      fill
-                      className="object-cover opacity-60"
-                    />
-                  </div>
-                ))}
+                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
+                  <Image
+                    src="/SidePhotos/Happiness.jpeg"
+                    alt="Instagram post 1"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
+                  <Image
+                    src="/SidePhotos/Miniwaffle.jpeg"
+                    alt="Instagram post 2"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
+                  <Image
+                    src="/SidePhotos/Happiness.jpeg"
+                    alt="Instagram post 3"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
+                  <Image
+                    src="/SidePhotos/Miniwaffle.jpeg"
+                    alt="Instagram post 4"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

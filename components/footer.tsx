@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MapPin, Phone, Mail } from 'lucide-react'
+import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -35,14 +35,33 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 uppercase tracking-wider text-white">Follow Us</h4>
             <div className="flex gap-4 mb-6">
-              <a href="#" className="text-primary hover:text-primary/80 transition text-2xl">
-                f
+              <a 
+                href="https://www.facebook.com/share/18RC9HPrGX/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition border-2 border-primary rounded-lg p-2"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="text-primary hover:text-primary/80 transition text-2xl">
-                ⓘ
+              <a 
+                href="https://www.instagram.com/_wafflesandmore_?utm_source=qr&igsh=cGlsdDFrbTZ1MGd5" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition border-2 border-primary rounded-lg p-2"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6" />
               </a>
             </div>
-            <p className="text-primary italic font-semibold">@wafflesandmore</p>
+            <a 
+              href="https://www.instagram.com/_wafflesandmore_?utm_source=qr&igsh=cGlsdDFrbTZ1MGd5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary italic font-semibold hover:text-primary/80 transition"
+            >
+              @wafflesandmore
+            </a>
           </div>
         </div>
 

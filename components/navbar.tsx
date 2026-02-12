@@ -40,6 +40,9 @@ export function Navbar({ isHomePage = false }: NavbarProps) {
             <Link href="/contact" className="text-white hover:text-primary transition font-semibold text-sm uppercase tracking-wide">
               Visit Us
             </Link>
+            <Link href="/events" className="text-white hover:text-primary transition font-semibold text-sm uppercase tracking-wide">
+              Events
+            </Link>
             <Link href="/franchise" className="text-white hover:text-primary transition font-semibold text-sm uppercase tracking-wide">
               Franchise
             </Link>
@@ -82,6 +85,13 @@ export function Navbar({ isHomePage = false }: NavbarProps) {
               onClick={() => setIsOpen(false)}
             >
               Visit Us
+            </Link>
+            <Link
+              href="/events"
+              className="block text-white hover:text-primary transition px-2 py-2 uppercase text-sm"
+              onClick={() => setIsOpen(false)}
+            >
+              Events
             </Link>
             <Link
               href="/franchise"

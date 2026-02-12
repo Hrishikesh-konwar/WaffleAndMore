@@ -40,24 +40,24 @@ export default function ContactPage() {
 
       <main className="flex-1">
         {/* Header Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background border-b border-border">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-secondary-foreground mb-4 text-balance">
-              Visit Our Chocolate Cafes
+            <h1 className="text-5xl md:text-6xl font-bold text-primary mb-4 text-balance uppercase tracking-wider">
+              Visit Us
             </h1>
-            <p className="text-xl text-secondary-foreground/90">
-              We'd love to welcome you! Find us at either location and indulge in our chocolate creations.
+            <p className="text-xl text-foreground">
+              We'd love to welcome you! Find us at either location and indulge in our delicious creations.
             </p>
           </div>
         </section>
 
         {/* Contact Information & Form */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Information */}
               <div className="space-y-8">
-                <h2 className="text-4xl font-bold text-secondary mb-12 text-balance">
+                <h2 className="text-4xl font-bold text-primary mb-12 text-balance uppercase tracking-wider">
                   Visit Us Today
                 </h2>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
 
               {/* Contact Form */}
               <div>
-                <h2 className="text-4xl font-bold text-secondary mb-8 text-balance">Send us a Message</h2>
+                <h2 className="text-4xl font-bold text-primary mb-8 text-balance uppercase tracking-wider">Send us a Message</h2>
                 <Card className="border-0 shadow-lg bg-white">
                   <CardContent className="p-8">
                     <form onSubmit={handleSubmit} className="space-y-6">
@@ -189,9 +189,9 @@ export default function ContactPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background border-t border-border">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-balance">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold text-primary mb-12 text-balance uppercase tracking-wider">Frequently Asked Questions</h2>
             <div className="space-y-6">
               <Card>
                 <CardHeader>
@@ -223,7 +223,7 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              {/* <Card>
                 <CardHeader>
                   <CardTitle className="text-lg">Do you have vegetarian options?</CardTitle>
                 </CardHeader>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                   Yes! All our waffles are vegetarian. We have both savory and sweet options for
                   everyone.
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </section>
