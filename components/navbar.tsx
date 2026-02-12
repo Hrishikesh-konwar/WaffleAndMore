@@ -64,7 +64,7 @@ export function Navbar({ isHomePage = false }: NavbarProps) {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-3 bg-black/80 backdrop-blur-sm rounded-lg p-4 mt-2">
+          <div className="md:hidden pb-4 space-y-3 bg-black/80 backdrop-blur-sm rounded-lg p-4 mt-2 relative z-[100]">
             <Link
               href="/"
               className="block text-white hover:text-primary transition px-2 py-2 uppercase text-sm"
