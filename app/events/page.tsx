@@ -1,62 +1,87 @@
-'use client'
+"use client";
 
-import React, { FormEvent, useState } from 'react'
-import { Navbar } from '@/components/navbar'
-import { Footer } from '@/components/footer'
-import { Card, CardContent } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
+import React, { FormEvent, useState } from "react";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
 export default function EventsPage() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    companyName: '',
-    email: '',
-    phone: '',
-    eventType: '',
-    eventDate: '',
-    eventLocation: '',
-    additionalDetails: ''
-  })
+    fullName: "",
+    companyName: "",
+    email: "",
+    phone: "",
+    eventType: "",
+    eventDate: "",
+    eventLocation: "",
+    additionalDetails: "",
+  });
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log('Event inquiry submitted:', formData)
-    alert('Thank you for your event inquiry! We will get back to you soon.')
-    setFormData({
-      fullName: '',
-      companyName: '',
-      email: '',
-      phone: '',
-      eventType: '',
-      eventDate: '',
-      eventLocation: '',
-      additionalDetails: ''
-    })
-  }
+    e.preventDefault();
+    console.log("Event inquiry submitted:", formData);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+    // Format the message for WhatsApp
+    const message = `*Event Inquiry*
+    
+ *Name:* ${formData.fullName}
+ *Company:* ${formData.companyName || "N/A"}
+ *Email:* ${formData.email}
+ *Phone:* ${formData.phone}
+ *Event Type:* ${formData.eventType}
+ *Date:* ${formData.eventDate}
+ *Location:* ${formData.eventLocation}
+
+ *Additional Details:*
+${formData.additionalDetails || "None"}
+    `;
+
+    // WhatsApp business number (replace with your actual number)
+    const whatsappNumber = "917028333337"; // Your business number
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
+
+    // Reset form after sending
+    setFormData({
+      fullName: "",
+      companyName: "",
+      email: "",
+      phone: "",
+      eventType: "",
+      eventDate: "",
+      eventLocation: "",
+      additionalDetails: "",
+    });
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const handleSelectChange = (value: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       eventType: value,
-    }))
-  }
+    }));
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -70,7 +95,8 @@ export default function EventsPage() {
               Event Inquiries
             </h1>
             <p className="text-xl text-foreground">
-              Make your special occasions sweeter with our premium waffles and desserts!
+              Make your special occasions sweeter with our premium waffles and
+              desserts!
             </p>
           </div>
         </section>
@@ -93,12 +119,15 @@ export default function EventsPage() {
                 <h2 className="text-4xl font-bold text-center mb-8 text-primary uppercase tracking-wider">
                   Event Inquiries
                 </h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Full Name */}
                     <div>
-                      <label htmlFor="fullName" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="fullName"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Full Name
                       </label>
                       <Input
@@ -114,19 +143,34 @@ export default function EventsPage() {
 
                     {/* Event Type */}
                     <div>
-                      <label htmlFor="eventType" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="eventType"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Event Type
                       </label>
-                      <Select onValueChange={handleSelectChange} value={formData.eventType} required>
+                      <Select
+                        onValueChange={handleSelectChange}
+                        value={formData.eventType}
+                        required
+                      >
                         <SelectTrigger className="bg-background border-border text-foreground">
                           <SelectValue placeholder="Corporate Event" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="corporate">Corporate Event</SelectItem>
+                          <SelectItem value="corporate">
+                            Corporate Event
+                          </SelectItem>
                           <SelectItem value="wedding">Wedding</SelectItem>
-                          <SelectItem value="birthday">Birthday Party</SelectItem>
-                          <SelectItem value="anniversary">Anniversary</SelectItem>
-                          <SelectItem value="social">Social Gathering</SelectItem>
+                          <SelectItem value="birthday">
+                            Birthday Party
+                          </SelectItem>
+                          <SelectItem value="anniversary">
+                            Anniversary
+                          </SelectItem>
+                          <SelectItem value="social">
+                            Social Gathering
+                          </SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
@@ -136,7 +180,10 @@ export default function EventsPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Company/Organization Name */}
                     <div>
-                      <label htmlFor="companyName" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="companyName"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Company/Organization Name
                       </label>
                       <Input
@@ -151,7 +198,10 @@ export default function EventsPage() {
 
                     {/* Date of Event */}
                     <div>
-                      <label htmlFor="eventDate" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="eventDate"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Date of Event
                       </label>
                       <Input
@@ -169,7 +219,10 @@ export default function EventsPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Email Address */}
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Email Address
                       </label>
                       <Input
@@ -186,7 +239,10 @@ export default function EventsPage() {
 
                     {/* Event Location */}
                     <div>
-                      <label htmlFor="eventLocation" className="block text-sm font-medium text-foreground mb-2">
+                      <label
+                        htmlFor="eventLocation"
+                        className="block text-sm font-medium text-foreground mb-2"
+                      >
                         Event Location (City)
                       </label>
                       <Input
@@ -203,7 +259,10 @@ export default function EventsPage() {
 
                   {/* Phone Number */}
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Phone Number
                     </label>
                     <Input
@@ -220,7 +279,10 @@ export default function EventsPage() {
 
                   {/* Additional Details */}
                   <div>
-                    <label htmlFor="additionalDetails" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="additionalDetails"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Additional Details (Optional)
                     </label>
                     <Textarea
@@ -236,9 +298,9 @@ export default function EventsPage() {
 
                   {/* Submit Button */}
                   <div className="text-center pt-4">
-                    <Button 
-                      type="submit" 
-                      size="lg" 
+                    <Button
+                      type="submit"
+                      size="lg"
                       className="w-full md:w-auto px-16 bg-primary hover:bg-primary/90 text-white text-lg font-semibold"
                     >
                       Submit
@@ -257,25 +319,35 @@ export default function EventsPage() {
               Catering Services
             </h2>
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              We specialize in making your events memorable with our delicious waffles and desserts. 
-              Whether it's a corporate event, wedding, birthday party, or any special occasion, 
-              we've got you covered!
+              We specialize in making your events memorable with our delicious
+              waffles and desserts. Whether it's a corporate event, wedding,
+              birthday party, or any special occasion, we've got you covered!
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-5xl mb-4">🎉</div>
-                <h3 className="text-xl font-bold text-white mb-2">All Events</h3>
-                <p className="text-foreground/80">Corporate, weddings, birthdays & more</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  All Events
+                </h3>
+                <p className="text-foreground/80">
+                  Corporate, weddings, birthdays & more
+                </p>
               </div>
               <div className="text-center">
                 <div className="text-5xl mb-4">👨‍🍳</div>
-                <h3 className="text-xl font-bold text-white mb-2">Expert Chefs</h3>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Expert Chefs
+                </h3>
                 <p className="text-foreground/80">Professional catering team</p>
               </div>
               <div className="text-center">
                 <div className="text-5xl mb-4">🧇</div>
-                <h3 className="text-xl font-bold text-white mb-2">Fresh & Premium</h3>
-                <p className="text-foreground/80">Quality ingredients guaranteed</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Fresh & Premium
+                </h3>
+                <p className="text-foreground/80">
+                  Quality ingredients guaranteed
+                </p>
               </div>
             </div>
           </div>
@@ -284,5 +356,5 @@ export default function EventsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

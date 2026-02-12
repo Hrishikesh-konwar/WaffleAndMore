@@ -53,16 +53,14 @@ export default function ContactPage() {
 
         {/* Contact Information & Form */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
-              <div className="space-y-8">
-                <h2 className="text-4xl font-bold text-primary mb-12 text-balance uppercase tracking-wider">
-                  Visit Us Today
-                </h2>
-
-                {/* Bharuch Location */}
-                <Card className="border-0 shadow-lg hover:shadow-xl transition bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-primary mb-12 text-center uppercase tracking-wider">
+              Visit Us Today
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Bharuch Location */}
+              <Card className="border-0 shadow-lg hover:shadow-xl transition bg-white">
                   <CardHeader className="bg-primary text-primary-foreground rounded-t-lg">
                     <CardTitle className="flex items-center gap-3 text-xl">
                       <MapPin className="w-6 h-6" />
@@ -123,68 +121,6 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
               </div>
-
-              {/* Contact Form */}
-              <div>
-                <h2 className="text-4xl font-bold text-primary mb-8 text-balance uppercase tracking-wider">Send us a Message</h2>
-                <Card className="border-0 shadow-lg bg-white">
-                  <CardContent className="p-8">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
-                          Your Name
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          placeholder="John Doe"
-                          className="bg-white border-border text-black"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
-                          Email Address
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          placeholder="john@example.com"
-                          className="bg-white border-border text-black"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
-                          Message
-                        </label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                          placeholder="Tell us what you think..."
-                          rows={5}
-                          className="bg-white border-border text-black"
-                        />
-                      </div>
-
-                      <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                        Send Message
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
           </div>
         </section>
 
