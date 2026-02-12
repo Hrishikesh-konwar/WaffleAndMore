@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: 'Waffles and More - Premium Waffle Cafe',
   description: 'Delicious Belgian waffles and more. Visit us at our Bharuch and Ankleshwar locations.',
   generator: 'v0.app',
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
 }
 
 export default function RootLayout({
