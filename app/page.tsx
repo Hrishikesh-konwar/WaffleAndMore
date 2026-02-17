@@ -12,9 +12,7 @@ import { useState } from 'react'
 export default function Page() {
   const [showMore, setShowMore] = useState(false)
 
-  // Dynamically generate image paths from WebsitePhotos folder
-  // Adjust the total count based on how many images you have
-  const totalImages = 30 // Update this if you add/remove images
+  const totalImages = 30
   const allSneakPeekItems = Array.from({ length: totalImages }, (_, index) => ({
     id: index + 1,
     src: `/WebsitePhotos/Artboard${index + 1}.jpg`,
@@ -30,7 +28,7 @@ export default function Page() {
       {/* Hero Section with Background Image */}
       <section className="relative h-screen flex items-end justify-start bg-background overflow-hidden">
         <Image
-          src="/waffle-hero.jpg"
+          src="/images/bankground.png"
           alt="Waffle and coffee showcase"
           fill
           className="object-cover absolute inset-0"
@@ -126,65 +124,6 @@ export default function Page() {
                 Swiggy
               </button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Instagram Gallery Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-            <div>
-              <h2 className="text-5xl font-bold text-white mb-8 uppercase tracking-wider">
-                About Us
-              </h2>
-              <p className="text-lg text-foreground leading-relaxed mb-6">
-                OG
-              </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                The OG waffle place. Visit us and experience the magic of authentic Belgian waffles crafted with passion and premium ingredients.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-5xl font-bold text-primary mb-8 italic tracking-wider">
-                @waffles&more
-              </h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
-                  <Image
-                    src="/SidePhotos/Happiness.jpeg"
-                    alt="Instagram post 1"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
-                  <Image
-                    src="/SidePhotos/Miniwaffle.jpeg"
-                    alt="Instagram post 2"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
-                  <Image
-                    src="/SidePhotos/Happiness.jpeg"
-                    alt="Instagram post 3"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative h-40 bg-muted rounded-lg overflow-hidden">
-                  <Image
-                    src="/SidePhotos/Miniwaffle.jpeg"
-                    alt="Instagram post 4"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
