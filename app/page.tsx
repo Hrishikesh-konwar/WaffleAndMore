@@ -22,18 +22,26 @@ export default function Page() {
   const sneakPeekItems = allSneakPeekItems.slice(0, 12) // Show first 12 initially
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Navbar isHomePage={true} />
+    <div className="min-h-screen flex flex-col relative">
+      {/* Background Image for entire page */}
+      <Image
+        src="/images/bankground.png"
+        alt="Waffle and coffee showcase"
+        fill
+        className="object-cover fixed inset-0 z-0 mt-50"
+        style={{ objectPosition: 'center 60%' }}
+      />
+      
+      {/* Dark overlay */}
+      <div className="fixed inset-0 bg-black/60 z-0"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar isHomePage={true} />
 
-      {/* Hero Section with Background Image */}
-      <section className="relative h-screen flex items-end justify-start bg-background overflow-hidden">
-        <Image
-          src="/images/bankground.png"
-          alt="Waffle and coffee showcase"
-          fill
-          className="object-cover absolute inset-0"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+        {/* Hero Section */}
+        <section className="relative h-screen flex items-end justify-start overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="max-w-2xl">
@@ -53,14 +61,14 @@ export default function Page() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Gallery section removed - content moved to Sneak Peek */}
         </div>
       </section>
 
       {/* Sneak Peek Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold text-white text-center mb-16 uppercase tracking-wider">
             Sneak Peek!
@@ -104,12 +112,12 @@ export default function Page() {
       </section>
 
       {/* Order Online Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-white mb-4 uppercase tracking-wider">
             Order Online
           </h2>
-          <p className="text-lg text-foreground mb-12">
+          <p className="text-lg text-white/90 mb-12">
             Freshly baked Crispy Waffles delivered to your doorstep!
           </p>
           
@@ -129,6 +137,7 @@ export default function Page() {
       </section>
 
       <Footer />
+      </div>
     </div>
   )
 }
