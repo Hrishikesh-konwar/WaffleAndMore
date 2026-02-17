@@ -27,26 +27,23 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-900 relative">
+      
+      {/* Dark overlay */}
+      <div className="fixed inset-0 bg-black/60 z-[1]"></div>
+      
+      {/* Content */}
+      <div className="relative z-10">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gray-900 text-white py-20 px-4 border-b border-gray-800">
+      <section className="relative overflow-hidden bg-transparent text-white py-20 px-4 border-b border-gray-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-3xl"></div>
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
         </div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          {/* <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tight text-primary uppercase">
-            ABOUT US
-          </h1>
-          <p className="text-xl md:text-2xl font-light text-gray-300 mb-4">
-            Where Global Inspiration Meets Local Love
-          </p> 
-          <p className="text-base text-gray-400 max-w-2xl mx-auto">
-            Inspired by Belgian craftsmanship, rooted in Bharuch's heart, thoughtfully made, freshly served, and deeply felt.
-          </p> */}
         </div>
       </section>
 
@@ -187,6 +184,7 @@ export default function AboutUs() {
       </div>
 
       <Footer />
+      </div>
     </div>
   );
 }

@@ -23,25 +23,23 @@ export default function Page() {
 
   return (
     <div className="min-h-screen flex flex-col relative">
-      {/* Background Image for entire page */}
-      <Image
-        src="/images/bankground.png"
-        alt="Waffle and coffee showcase"
-        fill
-        className="object-cover fixed inset-0 z-0 mt-50"
-        style={{ objectPosition: 'center 60%' }}
-      />
       
       {/* Dark overlay */}
-      <div className="fixed inset-0 bg-black/60 z-0"></div>
+      <div className="fixed inset-0 bg-black/60 z-[1]"></div>
       
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar isHomePage={true} />
 
         {/* Hero Section */}
-        <section className="relative h-screen flex items-end justify-start overflow-hidden">
+        <section className="relative flex items-end justify-start overflow-hidden py-20">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+          
+          {/* Gradient Blur Effects */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 right-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="max-w-2xl">
@@ -91,7 +89,7 @@ export default function Page() {
             <div className="text-center mt-12">
               <button 
                 onClick={() => setShowMore(true)}
-                className="text-primary hover:text-primary/80 transition font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
+                className="text-white hover:text-white/80 transition font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
               >
                 <span>+ Show More</span>
               </button>
@@ -102,7 +100,7 @@ export default function Page() {
             <div className="text-center mt-12">
               <button 
                 onClick={() => setShowMore(false)}
-                className="text-primary hover:text-primary/80 transition font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
+                className="text-white hover:text-white/80 transition font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
               >
                 <span>- Show Less</span>
               </button>

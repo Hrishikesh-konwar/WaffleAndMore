@@ -84,25 +84,35 @@ ${formData.additionalDetails || "None"}
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-gray-900 relative">
+      
+      {/* Dark overlay */}
+      <div className="fixed inset-0 bg-black/60 z-[1]"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 flex-1 flex flex-col">
       <Navbar />
 
       <main className="flex-1">
-        {/* Header Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background border-b border-border">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-primary mb-4 text-balance uppercase tracking-wider">
-              Event Inquiries
-            </h1>
-            <p className="text-xl text-foreground">
-              Make your special occasions sweeter with our premium waffles and
-              desserts!
-            </p>
-          </div>
-        </section>
+
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          {/* Header Section */}
+          <section className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-black text-primary mb-4 text-balance uppercase tracking-wide">
+                Events & Catering
+              </h2>
+              <p className="text-lg text-gray-300">
+                Make your special occasions sweeter with our premium waffles and desserts!
+              </p>
+              <p className="text-lg text-white font-semibold">
+                Perfect for weddings, birthdays, corporate events, and more
+              </p>
+            </div>
+          </section>
 
         {/* Event Inquiry Form Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
+        <section className="mb-20 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10 pointer-events-none">
             <div className="absolute top-10 left-10 text-8xl">🧇</div>
@@ -352,9 +362,11 @@ ${formData.additionalDetails || "None"}
             </div>
           </div>
         </section>
+        </div>
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 }
