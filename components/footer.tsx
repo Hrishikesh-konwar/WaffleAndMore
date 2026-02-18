@@ -19,15 +19,16 @@ export function Footer() {
             <h4 className="font-semibold mb-4 uppercase tracking-wider text-white">Locations</h4>
             <div className="space-y-4 text-sm">
               <div>
-                <p className="font-semibold text-white mb-1">Bharuch</p>
-                <p className="opacity-80">Nagarpalika Shopping Centre, Civil Hospital Road, Bharuch, Gujarat 392001</p>
-                <p className="opacity-80">+91 9499678796</p>
+                {/* <p className="font-semibold text-white mb-1">Bharuch</p> */}
+                <p className="opacity-80 mb-1">Owned & Operated by JAY SHAILESHKUMAR MODI</p>
+                <p className="opacity-80">Shop No. 2, Nagarpalika Shopping Centre, Civil Road, Bharuch, Gujarat – 392001</p>
+                <p className="opacity-80">Phone: +91 94996 78796</p>
               </div>
-              <div>
+              {/* <div>
                 <p className="font-semibold text-white mb-1">Ankleshwar</p>
                 <p className="opacity-80">Orange Heights, Sardar Park, GIDC, Ankleshwar, Gujarat 393002</p>
                 <p className="opacity-80">+91 9499678796</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -68,9 +69,23 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-border pt-8"></div>
 
+        {/* Links */}
+        <div className="text-center mb-6">
+          <div className="flex justify-center gap-6 text-sm">
+            <Link href="/terms" className="text-primary hover:text-primary/80 transition">
+              Terms & Conditions
+            </Link>
+            <span className="text-gray-500">|</span>
+            <Link href="/privacy" className="text-primary hover:text-primary/80 transition">
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div className="text-center text-sm opacity-70">
-          <p>© 2025 Waffle & More. All rights reserved.</p>
+          <p>© 2025 Waffle & More</p>
+          <p className="mt-1">Brand by Urban Gurb by JAY SHAILESHKUMAR MODI. All rights reserved.</p>
           <p className="mt-2 text-xs opacity-60">Bharuch & Ankleshwar, Gujarat | +91 9499678796</p>
         </div>
       </div>

@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-secondary-foreground mb-4">Privacy Policy</h1>
-            <p className="text-lg text-secondary-foreground/90">Last updated: February 2025</p>
+            <p className="text-lg text-secondary-foreground/90">Last Updated: February 18, 2026</p>
           </div>
         </section>
 
@@ -22,136 +22,184 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8 text-foreground">
               <div>
-                <h2 className="text-3xl font-bold text-secondary mb-4">1. Introduction</h2>
                 <p className="leading-relaxed">
-                  Waffles and More ("we," "us," or "our") operates the website. This page informs
-                  you of our policies regarding the collection, use, and disclosure of personal
-                  data when you use our website and the choices you have associated with that data.
+                  Waffles & More (hereinafter referred to as "Platform", "Website", "Waffles & More") is a website owned and operated by JAY SHAILESHKUMAR MODI (hereinafter referred to as "we", "us", or "our").
+                </p>
+                <p className="leading-relaxed mt-4">
+                  This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our services via our website or any of our digital platforms (collectively, the "Platform").
+                </p>
+                <p className="leading-relaxed mt-4">
+                  By accessing or using our Platform, you agree to the collection and use of your information in accordance with this Privacy Policy and applicable data protection laws, including but not limited to the Information Technology Act, 2000 (India), and the Digital Personal Data Protection Act, 2023.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">2. Information Collection</h2>
-                <p className="leading-relaxed mb-4">
-                  We collect different types of information for various purposes to provide and
-                  improve our website and services to you.
-                </p>
-                <div className="ml-4 space-y-4">
-                  <div>
-                    <h3 className="font-semibold text-secondary mb-2">Personal Data:</h3>
-                    <p className="leading-relaxed">
-                      While using our website, we may ask you to provide us with certain personally
-                      identifiable information that can be used to contact or identify you
-                      ("Personal Data"). This may include, but is not limited to:
-                    </p>
-                    <ul className="list-disc list-inside space-y-2 ml-4 mt-2">
-                      <li>Name and Email address</li>
-                      <li>Phone number</li>
-                      <li>Messages you send us through our contact form</li>
-                      <li>Cookies and usage data</li>
-                    </ul>
-                  </div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">1. Definitions</h2>
+                <ul className="space-y-3 ml-4">
+                  <li><strong>Service</strong> – Waffles & More's website and associated features and services.</li>
+                  <li><strong>Personal Data</strong> – Any information relating to an identified or identifiable natural person.</li>
+                  <li><strong>Usage Data</strong> – Information collected automatically through the use of the Platform.</li>
+                  <li><strong>Cookies</strong> – Small files stored on your device used to improve your user experience.</li>
+                  <li><strong>Data Controller</strong> – Waffles & More determines the purposes and means of processing personal data.</li>
+                  <li><strong>Consent</strong> – Freely given, specific, informed, and unambiguous indication of the user's wishes.</li>
+                </ul>
+              </div>
 
-                  <div>
-                    <h3 className="font-semibold text-secondary mb-2">Usage Data:</h3>
-                    <p className="leading-relaxed">
-                      We may also collect information about how the website is accessed and used
-                      ("Usage Data"). This may include information such as your computer's IP
-                      address, browser type, browser version, the pages you visit, and other
-                      diagnostic data.
-                    </p>
-                  </div>
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">2. Information We Collect</h2>
+                
+                <h3 className="text-xl font-semibold text-secondary mb-3 mt-6">a. Personal Data You Provide</h3>
+                <p className="leading-relaxed mb-3">When you interact with Waffles & More, we may collect:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Full name, email address, contact number</li>
+                  <li>Delivery address and location</li>
+                  <li>Social media login data (if you use third-party sign-ins)</li>
+                  <li>Order history and preferences</li>
+                  <li>Payment and billing information (handled via secure third-party gateways)</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-secondary mb-3 mt-6">b. Automatically Collected Usage Data</h3>
+                <p className="leading-relaxed mb-3">When you visit or use our services, we may collect:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Your IP address and geographic location</li>
+                  <li>Browser type, operating system, and device model</li>
+                  <li>Pages visited, features used, and time spent</li>
+                  <li>Clickstream data and referring URLs</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-secondary mb-3 mt-6">c. Cookies & Tracking Technologies</h3>
+                <p className="leading-relaxed mb-3">We use cookies, web beacons, tags, and scripts for:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Session management</li>
+                  <li>Analytics and traffic monitoring</li>
+                  <li>Personalization and remarketing</li>
+                </ul>
+                <p className="leading-relaxed mt-3">You can control cookies via your browser settings. However, disabling cookies may affect your experience.</p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">3. How We Use Your Data</h2>
+                <p className="leading-relaxed mb-3">We process your data for the following purposes:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>To process and fulfill your orders</li>
+                  <li>To provide customer support and notify you of updates</li>
+                  <li>To personalize your experience and improve service functionality</li>
+                  <li>To send order confirmations, newsletters, and promotional offers (with opt-out options)</li>
+                  <li>To enforce terms and conditions and protect against abuse</li>
+                  <li>To comply with legal, tax, or contractual obligations</li>
+                  <li>To analyze usage patterns and improve our services</li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">4. Legal Basis for Processing</h2>
+                <p className="leading-relaxed mb-3">Our legal basis for collecting and using your personal information includes:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li><strong>Consent</strong> – Where you have given consent for specific purposes</li>
+                  <li><strong>Contractual Necessity</strong> – Where processing is necessary for a service you requested</li>
+                  <li><strong>Legal Obligation</strong> – To comply with applicable laws</li>
+                  <li><strong>Legitimate Interest</strong> – To enhance platform experience, prevent fraud, or analyze behavior</li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">5. Data Sharing and Disclosure</h2>
+                <p className="leading-relaxed mb-3">
+                  We do not sell or rent your personal data. However, we may share data with:
+                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li><strong>Authorized Service Providers:</strong> Payment processors (Zomato, Swiggy), delivery partners, cloud hosting, and analytics tools</li>
+                  <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets</li>
+                  <li><strong>Legal Authorities:</strong> If required by law, regulation, or legal process</li>
+                </ul>
+                <p className="leading-relaxed mt-3">
+                  All third parties are contractually obligated to handle your data securely and only for permitted purposes.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">6. Data Retention</h2>
+                <p className="leading-relaxed mb-3">We retain your data for as long as necessary to:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Fulfill the purposes outlined in this Privacy Policy</li>
+                  <li>Maintain business and transactional records</li>
+                  <li>Comply with legal or regulatory obligations</li>
+                </ul>
+                <p className="leading-relaxed mt-3">
+                  When no longer required, your data will be securely deleted or anonymized.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">7. Your Data Protection Rights</h2>
+                <p className="leading-relaxed mb-3">As a user, you have the following rights:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li><strong>Access</strong> – You may request a copy of the data we hold about you</li>
+                  <li><strong>Correction</strong> – You may request that inaccurate data be corrected</li>
+                  <li><strong>Deletion</strong> – You may request that we delete your personal data</li>
+                  <li><strong>Objection</strong> – You may object to processing based on legitimate interests</li>
+                  <li><strong>Consent Withdrawal</strong> – You can withdraw consent at any time</li>
+                  <li><strong>Data Portability</strong> – Right to receive your data in a machine-readable format</li>
+                  <li><strong>Restrict Processing</strong> – Right to restrict processing in certain cases</li>
+                </ul>
+                <p className="leading-relaxed mt-3">
+                  To exercise any of these rights, contact us at +91 94996 78796.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">8. Data Security</h2>
+                <p className="leading-relaxed mb-3">We take your data security seriously. Measures we implement include:</p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>SSL encryption and secure HTTPS connections</li>
+                  <li>Role-based access control within our systems</li>
+                  <li>Regular security audits and monitoring</li>
+                  <li>Secure third-party payment gateways</li>
+                </ul>
+                <p className="leading-relaxed mt-3">
+                  However, no method of transmission over the Internet is 100% secure. We encourage you to take precautions such as using strong passwords.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">9. International Data Transfers</h2>
+                <p className="leading-relaxed">
+                  Your personal data may be transferred to and stored in countries outside your residence, including India, where data protection laws may differ. We ensure that appropriate safeguards are in place to protect your rights.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">10. Children's Privacy</h2>
+                <p className="leading-relaxed">
+                  Our Platform is not intended for users under the age of 18. We do not knowingly collect personal data from minors. If we become aware of such data being submitted, we will delete it immediately.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">11. Changes to This Privacy Policy</h2>
+                <p className="leading-relaxed">
+                  We may update this Privacy Policy periodically. If we make significant changes, we will notify you via email or website alerts. Continued use of the platform after any changes implies your consent to the updated policy. We request you to keep visiting our privacy policy page to see any changes.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-secondary mb-4">12. Contact Us</h2>
+                <p className="leading-relaxed mb-4">
+                  For questions, concerns, or to exercise your rights under this Policy, please contact:
+                </p>
+                <div className="bg-gray-800 p-6 rounded-lg">
+                  <p className="leading-relaxed">
+                    <strong className="text-primary">Waffles & More</strong>
+                    <br />
+                    <strong>Owned & Operated by JAY SHAILESHKUMAR MODI</strong>
+                    <br />
+                    Shop No. 2, Nagarpalika Shopping Centre, Civil Road, Bharuch, Gujarat – 392001
+                    <br />
+                    Phone: +91 94996 78796
+                    <br />
+                    Instagram: @_wafflesandmore_
+                  </p>
                 </div>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">3. Use of Data</h2>
-                <p className="leading-relaxed mb-4">
-                  Waffles and More uses the collected data for various purposes:
-                </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>To provide and maintain our website and services</li>
-                  <li>To notify you about changes to our website or services</li>
-                  <li>To allow you to participate in interactive features of our website</li>
-                  <li>To provide customer support</li>
-                  <li>To gather analysis or valuable information so we can improve our website</li>
-                  <li>To monitor the usage of our website</li>
-                  <li>To detect, prevent and address technical issues</li>
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">4. Security of Data</h2>
-                <p className="leading-relaxed">
-                  The security of your data is important to us but remember that no method of
-                  transmission over the Internet or method of electronic storage is 100% secure.
-                  While we strive to use commercially acceptable means to protect your Personal
-                  Data, we cannot guarantee its absolute security.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">5. Cookies</h2>
-                <p className="leading-relaxed">
-                  We use cookies and similar tracking technologies to track activity on our website
-                  and hold certain information. Cookies are files with a small amount of data which
-                  may include an anonymous unique identifier. Most browsers have the option to
-                  disable cookies. If you choose to disable cookies, you may not be able to use
-                  certain portions of our website.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">6. Third-Party Services</h2>
-                <p className="leading-relaxed">
-                  Our website may contain links to third-party websites. We are not responsible for
-                  the privacy practices of these other websites. We encourage you to review the
-                  privacy policies of any third-party websites before providing your personal
-                  information.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">
-                  7. Changes to This Privacy Policy
-                </h2>
-                <p className="leading-relaxed">
-                  We may update our Privacy Policy from time to time. We will notify you of any
-                  changes by posting the new Privacy Policy on this page and updating the "Last
-                  updated" date at the top of this Privacy Policy.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">8. Your Rights</h2>
-                <p className="leading-relaxed mb-4">
-                  You have the right to:
-                </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Access the personal data we hold about you</li>
-                  <li>Request correction of inaccurate personal data</li>
-                  <li>Request deletion of your personal data</li>
-                  <li>Object to our processing of your personal data</li>
-                  <li>Request restriction of processing of your personal data</li>
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-secondary mb-4">9. Contact Us</h2>
-                <p className="leading-relaxed mb-4">
-                  If you have any questions about this Privacy Policy, please contact us at:
-                </p>
-                <p className="leading-relaxed">
-                  <strong>Waffles and More</strong>
-                  <br />
-                  Phone: +91 9499678796
-                  <br />
-                  Bharuch Location: Nagarpalika Shopping Centre, Civil Hospital Road, Moficer Jin
-                  Compound, Bharuch, Gujarat 392001
-                  <br />
-                  Ankleshwar Location: Orange Heights, Sardar Park, Golden Point Chowkdi Road, GIDC,
-                  Ankleshwar, Gujarat 393002
-                </p>
               </div>
             </div>
           </div>
