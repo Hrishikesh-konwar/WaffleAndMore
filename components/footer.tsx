@@ -85,7 +85,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="text-center text-sm opacity-70">
           <p>© 2025 Waffle & More</p>
-          <p className="mt-1">Brand by Urban Gurb by JAY SHAILESHKUMAR MODI. All rights reserved.</p>
+          <p className="mt-1">Brand by Urban Grub by JAY SHAILESHKUMAR MODI. All rights reserved.</p>
           <p className="mt-2 text-xs opacity-60">Bharuch & Ankleshwar, Gujarat | +91 9499678796</p>
         </div>
       </div>
