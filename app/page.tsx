@@ -34,20 +34,18 @@ export default function Page() {
         <section className="relative flex items-end justify-start overflow-hidden min-h-[60vh] md:min-h-[80vh] lg:h-screen">
           {/* Background Image for Hero Section */}
           <Image
-            src="/branding.png"
+            src="/elements.jpeg"
             alt="Waffle hero background"
             fill
             className="object-cover"
             style={{ objectPosition: "center" }}
             priority
           />
-
-    
         </section>
 
         {/* Sneak Peek Section */}
         <section className="pb-20 px-4 sm:px-6 lg:px-8">
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
             <div className="max-w-2xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight text-balance">
                 For All Your Dessert & Coffee Cravings
