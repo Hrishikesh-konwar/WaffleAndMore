@@ -17,17 +17,17 @@ export function Navbar({ isHomePage = false }: NavbarProps) {
     <nav className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {isHomePage && (
+          {/* {isHomePage && (
             <Link href="/" className="flex items-center -my-4">
               <Image 
                 src="/images/logo.png" 
-                alt="Waffle & More Logo" 
+                alt="Waffles & More Logo" 
                 width={2096} 
                 height={2096}
                 className="h-80 mt-16 w-auto object-contain relative z-10"
               />
             </Link>
-          )}
+          )} */}
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-12 items-center ml-auto">

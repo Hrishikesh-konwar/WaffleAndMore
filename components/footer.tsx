@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-2xl mb-4 uppercase tracking-wider text-white">About Us</h3>
             <p className="text-sm opacity-80 leading-relaxed">
-              Waffle & More - The OG waffle place serving the finest Belgian waffles and premium desserts with authentic recipes and passion.
+              Waffles & More - The OG waffle place serving the finest Belgian waffles and premium desserts with authentic recipes and passion.
             </p>
           </div>
 

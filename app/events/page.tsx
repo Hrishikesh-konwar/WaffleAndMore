@@ -85,287 +85,291 @@ ${formData.additionalDetails || "None"}
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 relative">
-      
       {/* Dark overlay */}
       <div className="fixed inset-0 bg-black/60 z-[1]"></div>
-      
+
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col">
-      <Navbar />
-
-      <main className="flex-1">
-
-        <div className="max-w-6xl mx-auto px-4 py-16">
-          {/* Header Section */}
-          <section className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-black text-primary mb-4 text-balance uppercase tracking-wide">
-                Events & Catering
-              </h2>
-              <p className="text-lg text-gray-300">
-                Make your special occasions sweeter with our premium waffles and desserts!
-              </p>
-              <p className="text-lg text-white font-semibold">
-                Perfect for weddings, birthdays, corporate events, and more
-              </p>
-            </div>
-          </section>
-
-        {/* Event Inquiry Form Section */}
-        <section className="mb-20 relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="absolute top-10 left-10 text-8xl">🧇</div>
-            <div className="absolute top-40 right-20 text-6xl">☕</div>
-            <div className="absolute bottom-20 left-20 text-7xl">🍰</div>
-            <div className="absolute bottom-40 right-10 text-8xl">🧁</div>
-            <div className="absolute top-1/2 left-1/3 text-5xl">🍓</div>
-            <div className="absolute top-1/3 right-1/3 text-6xl">🍫</div>
-          </div>
-
-          <div className="max-w-4xl mx-auto relative z-10">
-            <Card className="border border-border shadow-2xl bg-background/95 backdrop-blur-sm">
-              <CardContent className="p-8 md:p-12">
-                <h2 className="text-4xl font-bold text-center mb-8 text-primary uppercase tracking-wider">
-                  Event Inquiries
+        <Navbar />
+        <section className="relative overflow-hidden bg-transparent text-white py-10 px-4 border-b border-gray-800">
+          <div className="max-w-4xl mx-auto text-center relative z-10"></div>
+        </section>
+        <main className="flex-1">
+          <div className="max-w-6xl mx-auto px-4 py-16">
+            {/* Header Section */}
+            <section className="mb-20">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-black text-primary mb-4 text-balance uppercase tracking-wide">
+                  Events & Catering
                 </h2>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Full Name */}
-                    <div>
-                      <label
-                        htmlFor="fullName"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Full Name
-                      </label>
-                      <Input
-                        id="fullName"
-                        name="fullName"
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        required
-                        placeholder="Full Name"
-                        className="bg-background border-border text-foreground"
-                      />
-                    </div>
-
-                    {/* Event Type */}
-                    <div>
-                      <label
-                        htmlFor="eventType"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Event Type
-                      </label>
-                      <Select
-                        onValueChange={handleSelectChange}
-                        value={formData.eventType}
-                        required
-                      >
-                        <SelectTrigger className="bg-background border-border text-foreground">
-                          <SelectValue placeholder="Corporate Event" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="corporate">
-                            Corporate Event
-                          </SelectItem>
-                          <SelectItem value="wedding">Wedding</SelectItem>
-                          <SelectItem value="birthday">
-                            Birthday Party
-                          </SelectItem>
-                          <SelectItem value="anniversary">
-                            Anniversary
-                          </SelectItem>
-                          <SelectItem value="social">
-                            Social Gathering
-                          </SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Company/Organization Name */}
-                    <div>
-                      <label
-                        htmlFor="companyName"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Company/Organization Name
-                      </label>
-                      <Input
-                        id="companyName"
-                        name="companyName"
-                        value={formData.companyName}
-                        onChange={handleChange}
-                        placeholder="Company/Organization Name"
-                        className="bg-background border-border text-foreground"
-                      />
-                    </div>
-
-                    {/* Date of Event */}
-                    <div>
-                      <label
-                        htmlFor="eventDate"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Date of Event
-                      </label>
-                      <Input
-                        id="eventDate"
-                        name="eventDate"
-                        type="date"
-                        value={formData.eventDate}
-                        onChange={handleChange}
-                        required
-                        className="bg-background border-border text-foreground"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Email Address */}
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Email Address
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="Email Address"
-                        className="bg-background border-border text-foreground"
-                      />
-                    </div>
-
-                    {/* Event Location */}
-                    <div>
-                      <label
-                        htmlFor="eventLocation"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Event Location (City)
-                      </label>
-                      <Input
-                        id="eventLocation"
-                        name="eventLocation"
-                        value={formData.eventLocation}
-                        onChange={handleChange}
-                        required
-                        placeholder="Enter your event location"
-                        className="bg-background border-border text-foreground"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Phone Number */}
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      Phone Number
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      placeholder="Phone Number"
-                      className="bg-background border-border text-foreground"
-                    />
-                  </div>
-
-                  {/* Additional Details */}
-                  <div>
-                    <label
-                      htmlFor="additionalDetails"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      Additional Details (Optional)
-                    </label>
-                    <Textarea
-                      id="additionalDetails"
-                      name="additionalDetails"
-                      value={formData.additionalDetails}
-                      onChange={handleChange}
-                      placeholder="Tell us more about your event requirements..."
-                      rows={4}
-                      className="bg-background border-border text-foreground"
-                    />
-                  </div>
-
-                  {/* Submit Button */}
-                  <div className="text-center pt-4">
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full md:w-auto px-16 bg-primary hover:bg-primary/90 text-white text-lg font-semibold"
-                    >
-                      Submit
-                    </Button>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Info Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background border-t border-border">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-primary mb-8 uppercase tracking-wider">
-              Catering Services
-            </h2>
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              We specialize in making your events memorable with our delicious
-              waffles and desserts. Whether it's a corporate event, wedding,
-              birthday party, or any special occasion, we've got you covered!
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-5xl mb-4">🎉</div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  All Events
-                </h3>
-                <p className="text-foreground/80">
-                  Corporate, weddings, birthdays & more
+                <p className="text-lg text-gray-300">
+                  Make your special occasions sweeter with our premium waffles
+                  and desserts!
+                </p>
+                <p className="text-lg text-white font-semibold">
+                  Perfect for weddings, birthdays, corporate events, and more
                 </p>
               </div>
-              <div className="text-center">
-                <div className="text-5xl mb-4">👨‍🍳</div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  Expert Chefs
-                </h3>
-                <p className="text-foreground/80">Professional catering team</p>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl mb-4">🧇</div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  Fresh & Premium
-                </h3>
-                <p className="text-foreground/80">
-                  Quality ingredients guaranteed
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        </div>
-      </main>
+            </section>
 
-      <Footer />
+            {/* Event Inquiry Form Section */}
+            <section className="mb-20 relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10 pointer-events-none">
+                <div className="absolute top-10 left-10 text-8xl">🧇</div>
+                <div className="absolute top-40 right-20 text-6xl">☕</div>
+                <div className="absolute bottom-20 left-20 text-7xl">🍰</div>
+                <div className="absolute bottom-40 right-10 text-8xl">🧁</div>
+                <div className="absolute top-1/2 left-1/3 text-5xl">🍓</div>
+                <div className="absolute top-1/3 right-1/3 text-6xl">🍫</div>
+              </div>
+
+              <div className="max-w-4xl mx-auto relative z-10">
+                <Card className="border border-border shadow-2xl bg-background/95 backdrop-blur-sm">
+                  <CardContent className="p-8 md:p-12">
+                    <h2 className="text-4xl font-bold text-center mb-8 text-primary uppercase tracking-wider">
+                      Event Inquiries
+                    </h2>
+
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Full Name */}
+                        <div>
+                          <label
+                            htmlFor="fullName"
+                            className="block text-sm font-medium text-foreground mb-2"
+                          >
+                            Full Name
+                          </label>
+                          <Input
+                            id="fullName"
+                            name="fullName"
+                            value={formData.fullName}
+                            onChange={handleChange}
+                            required
+                            placeholder="Full Name"
+                            className="bg-background border-border text-foreground"
+                          />
+                        </div>
+
+                        {/* Event Type */}
+                        <div>
+                          <label
+                            htmlFor="eventType"
+                            className="block text-sm font-medium text-foreground mb-2"
+                          >
+                            Event Type
+                          </label>
+                          <Select
+                            onValueChange={handleSelectChange}
+                            value={formData.eventType}
+                            required
+                          >
+                            <SelectTrigger className="bg-background border-border text-foreground">
+                              <SelectValue placeholder="Corporate Event" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="corporate">
+                                Corporate Event
+                              </SelectItem>
+                              <SelectItem value="wedding">Wedding</SelectItem>
+                              <SelectItem value="birthday">
+                                Birthday Party
+                              </SelectItem>
+                              <SelectItem value="anniversary">
+                                Anniversary
+                              </SelectItem>
+                              <SelectItem value="social">
+                                Social Gathering
+                              </SelectItem>
+                              <SelectItem value="other">Other</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Company/Organization Name */}
+                        <div>
+                          <label
+                            htmlFor="companyName"
+                            className="block text-sm font-medium text-foreground mb-2"
+                          >
+                            Company/Organization Name
+                          </label>
+                          <Input
+                            id="companyName"
+                            name="companyName"
+                            value={formData.companyName}
+                            onChange={handleChange}
+                            placeholder="Company/Organization Name"
+                            className="bg-background border-border text-foreground"
+                          />
+                        </div>
+
+                        {/* Date of Event */}
+                        <div>
+                          <label
+                            htmlFor="eventDate"
+                            className="block text-sm font-medium text-foreground mb-2"
+                          >
+                            Date of Event
+                          </label>
+                          <Input
+                            id="eventDate"
+                            name="eventDate"
+                            type="date"
+                            value={formData.eventDate}
+                            onChange={handleChange}
+                            required
+                            className="bg-background border-border text-foreground"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Email Address */}
+                        <div>
+                          <label
+                            htmlFor="email"
+                            className="block text-sm font-medium text-foreground mb-2"
+                          >
+                            Email Address
+                          </label>
+                          <Input
+                            id="email"
+                            name="email"
+                            type="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            placeholder="Email Address"
+                            className="bg-background border-border text-foreground"
+                          />
+                        </div>
+
+                        {/* Event Location */}
+                        <div>
+                          <label
+                            htmlFor="eventLocation"
+                            className="block text-sm font-medium text-foreground mb-2"
+                          >
+                            Event Location (City)
+                          </label>
+                          <Input
+                            id="eventLocation"
+                            name="eventLocation"
+                            value={formData.eventLocation}
+                            onChange={handleChange}
+                            required
+                            placeholder="Enter your event location"
+                            className="bg-background border-border text-foreground"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Phone Number */}
+                      <div>
+                        <label
+                          htmlFor="phone"
+                          className="block text-sm font-medium text-foreground mb-2"
+                        >
+                          Phone Number
+                        </label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          required
+                          placeholder="Phone Number"
+                          className="bg-background border-border text-foreground"
+                        />
+                      </div>
+
+                      {/* Additional Details */}
+                      <div>
+                        <label
+                          htmlFor="additionalDetails"
+                          className="block text-sm font-medium text-foreground mb-2"
+                        >
+                          Additional Details (Optional)
+                        </label>
+                        <Textarea
+                          id="additionalDetails"
+                          name="additionalDetails"
+                          value={formData.additionalDetails}
+                          onChange={handleChange}
+                          placeholder="Tell us more about your event requirements..."
+                          rows={4}
+                          className="bg-background border-border text-foreground"
+                        />
+                      </div>
+
+                      {/* Submit Button */}
+                      <div className="text-center pt-4">
+                        <Button
+                          type="submit"
+                          size="lg"
+                          className="w-full md:w-auto px-16 bg-primary hover:bg-primary/90 text-white text-lg font-semibold"
+                        >
+                          Submit
+                        </Button>
+                      </div>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
+
+            {/* Info Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background border-t border-border">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-4xl font-bold text-primary mb-8 uppercase tracking-wider">
+                  Catering Services
+                </h2>
+                <p className="text-lg text-foreground leading-relaxed mb-6">
+                  We specialize in making your events memorable with our
+                  delicious waffles and desserts. Whether it's a corporate
+                  event, wedding, birthday party, or any special occasion, we've
+                  got you covered!
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                  <div className="text-center">
+                    <div className="text-5xl mb-4">🎉</div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      All Events
+                    </h3>
+                    <p className="text-foreground/80">
+                      Corporate, weddings, birthdays & more
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-5xl mb-4">👨‍🍳</div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Expert Chefs
+                    </h3>
+                    <p className="text-foreground/80">
+                      Professional catering team
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-5xl mb-4">🧇</div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Fresh & Premium
+                    </h3>
+                    <p className="text-foreground/80">
+                      Quality ingredients guaranteed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <Footer />
       </div>
     </div>
   );
