@@ -95,7 +95,7 @@ export default function ContactPage() {
                       <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-white font-semibold">
-                          10:00 AM - 10:00 PM
+                          09:30 AM - 11:00 PM
                         </p>
                         <p className="text-sm text-gray-400">Open All Days</p>
                       </div>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                       <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div>
                         <p className="text-white font-semibold">
-                          10:00 AM - 10:00 PM
+                          09:30 AM - 11:00 PM
                         </p>
                         <p className="text-sm text-gray-400">Open All Days</p>
                       </div>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-300">
-                    We're open from 10:00 AM to 10:00 PM every day of the week.
+                    We're open from 09:30 AM to 11:00 PM every day of the week.
                     Check our locations page for more details.
                   </CardContent>
                 </Card>
