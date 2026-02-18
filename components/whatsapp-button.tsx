@@ -6,7 +6,7 @@ export function WhatsAppButton() {
   const handleClick = () => {
     // WhatsApp number in international format without + or spaces
     const phoneNumber = '919499678796'
-    const message = encodeURIComponent('Hi! I would like to know more about Waffles & More')
+    const message = encodeURIComponent('Hi! I would like to know about Waffles & More')
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
     window.open(whatsappUrl, '_blank')
   }
